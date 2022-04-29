@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="items1"
+		class="com.springdemos.springcore.assignment.Item" p:id="1"
+		p:name="milk" p:price="30" p:quantity="10">
+	</bean>
+	<bean name="items2"
+		class="com.springdemos.springcore.assignment.Item" p:id="2"
+		p:name="egg" p:price="100" p:quantity="100">
+	</bean>
+	<bean name="items3"
+		class="com.springdemos.springcore.assignment.Item" p:id="2"
+		p:name="ghee" p:price="200" p:quantity="20">
+	</bean>
+
+	<bean name="cart"
+		class="com.springdemos.springcore.assignment.ShoppingCart"
+		p:name="Praneetha">
+		<property name="items">
+			<list>
+				<ref bean="items1" />
+				<ref bean="items2" />
+				<ref bean="items3" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
