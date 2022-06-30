@@ -1,0 +1,18 @@
+package com.springapps.springorm.product.dao;
+
+import java.util.List;
+
+import com.springapps.springorm.product.entity.Product;
+
+public interface ProductDao {
+
+	int create(Product product);
+	
+	void update(Product product);
+	
+	void delete(Product product);
+	
+	List<Product> findall();
+
+	Product find(int id);
+}
